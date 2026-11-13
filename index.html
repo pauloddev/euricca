@@ -197,10 +197,12 @@ header.solid .brand img{height:46px}
 .col:hover img{transform:scale(1.07)}
 .col:hover .cap span,.col:focus-visible .cap span{opacity:1;transform:none}
 @media (max-width:900px){
-  .cols{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;margin-inline:calc(-1*var(--pad));padding-inline:var(--pad);scrollbar-width:none}
-  .cols::-webkit-scrollbar{display:none}
-  .col{flex:0 0 68vw;scroll-snap-align:center}
-  .col .cap span{opacity:1;transform:none}
+  .cols{grid-template-columns:repeat(2,1fr);gap:10px}
+  .col:last-child{grid-column:1/-1;aspect-ratio:4/3}
+  .col:last-child img{object-position:50% 22%}
+  .col .cap{padding:16px 10px}
+  .col .cap b{font-size:clamp(.95rem,4vw,1.15rem);letter-spacing:.06em}
+  .col .cap span{opacity:1;transform:none;font-size:10.5px;letter-spacing:.2em;margin-top:6px}
 }
 
 /* CARROSSEL */
