@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Eu Ricca Semijoias | A verdadeira riqueza começa em você</title>
+<meta name="description" content="Eu Ricca Semijoias — peças folheadas a ouro 18k e ródio, com 1 ano de garantia. Varejo e atacado em Caruaru-PE, com envio para todo o Brasil.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Eu Ricca Semijoias — A verdadeira riqueza começa em você">
+<meta property="og:description" content="Semijoias folheadas a ouro 18k e ródio. Varejo e atacado. Envio para todo o Brasil.">
+<meta property="og:image" content="https://raw.githubusercontent.com/pauloddev/euricca/main/img/og.jpg">
+<meta property="og:image:secure_url" content="https://raw.githubusercontent.com/pauloddev/euricca/main/img/og.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Logo Eu Ricca Semijoias sobre cetim turquesa">
+<meta property="og:site_name" content="Eu Ricca Semijoias">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Eu Ricca Semijoias — A verdadeira riqueza começa em você">
+<meta name="twitter:description" content="Semijoias folheadas a ouro 18k e ródio. Varejo e atacado. Envio para todo o Brasil.">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/pauloddev/euricca/main/img/og.jpg">
+<meta name="theme-color" content="#02B9C1">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="apple-touch-icon" href="img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Jost:wght@300..600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --turq:#02B9C1; --turq-deep:#027F86; --turq-ink:#015B61; --white:#FFFFFF; --pearl:#F5FBFB;
+  --champ:#D7BE8C; --glass:rgba(255,255,255,.14); --glass-line:rgba(255,255,255,.5);
+  --serif:"Cormorant", "Cormorant Garamond", Georgia, serif; --sans:"Jost", "Helvetica Neue", Arial, sans-serif;
+  --w-body:400; --w-small:420; /* textos pequenos 5% mais grossos */
+  --wrap:1240px; --pad:clamp(20px,5vw,64px);
+  --ease:cubic-bezier(.22,.7,.18,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;overflow-x:hidden;overflow-x:clip}
+body{font-family:var(--sans);font-weight:var(--w-body);color:var(--white);background:var(--turq-deep);line-height:1.65;font-size:17px;overflow-x:hidden}
+body.locked{overflow:hidden}
+img,video{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+:focus-visible{outline:2px solid var(--champ);outline-offset:4px}
+
+/* textura de cetim no site inteiro */
+.satin{position:fixed;inset:0;z-index:-2;background:url(img/satin.webp) center/cover no-repeat var(--turq-deep)}
+.satin::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(2,185,193,.18),rgba(2,185,193,.08))}
+
+.wrap{width:min(var(--wrap),100% - 2*var(--pad));margin-inline:auto}
+section{position:relative}
+.sec{padding-block:clamp(84px,11vw,150px)}
+.light{background:linear-gradient(rgba(247,252,252,.94),rgba(247,252,252,.94)),url(img/satin.webp) center/cover;color:var(--turq-ink)}
+.light .kicker{color:var(--turq-deep)}
+
+/* tipografia */
+.display{font-family:var(--serif);font-weight:500;text-transform:uppercase;letter-spacing:.03em;line-height:1.02;font-size:clamp(2.5rem,5.6vw,5.2rem)}
+.h2{font-family:var(--serif);font-weight:500;text-transform:uppercase;letter-spacing:.04em;line-height:1.06;font-size:clamp(2rem,4.2vw,3.6rem)}
+.h3{font-family:var(--serif);font-weight:500;text-transform:uppercase;letter-spacing:.06em;line-height:1.15;font-size:clamp(1.25rem,2vw,1.6rem)}
+.kicker{font-family:var(--sans);font-weight:500;font-size:12.5px;letter-spacing:.32em;text-transform:uppercase;font-variation-settings:"wght" 525;opacity:.92}
+.lead{font-size:clamp(1.05rem,1.4vw,1.2rem);max-width:56ch}
+.small{font-size:13.5px;font-weight:var(--w-small);letter-spacing:.04em}
+.rule{width:72px;height:1px;background:var(--champ);border:0}
+.center{text-align:center}.center .rule,.center .lead{margin-inline:auto}
+
+/* botões glassmorphism */
+.btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:52px;padding:0 30px;
+  font-size:12.5px;letter-spacing:.28em;text-transform:uppercase;font-weight:500;font-variation-settings:"wght" 525;
+  background:var(--glass);border:1px solid var(--glass-line);color:#fff;
+  -webkit-backdrop-filter:blur(16px) saturate(150%);backdrop-filter:blur(16px) saturate(150%);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.35),0 10px 30px -14px rgba(0,60,64,.55);
+  transition:background .4s var(--ease),transform .4s var(--ease),border-color .4s}
+.btn::after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 30%,rgba(255,255,255,.35) 50%,transparent 70%);background-size:250% 100%;background-position:120% 0;transition:background-position .9s var(--ease);pointer-events:none}
+.btn:hover{background:rgba(255,255,255,.26);transform:translateY(-2px)}
+.btn:hover::after{background-position:-20% 0}
+.btn.solid{background:rgba(2,185,193,.55);border-color:rgba(255,255,255,.6)}
+.light .btn{background:rgba(2,185,193,.12);border-color:rgba(2,127,134,.45);color:var(--turq-ink)}
+.light .btn:hover{background:rgba(2,185,193,.22)}
+.light .btn.solid{background:rgba(2,185,193,.85);color:#fff;border-color:rgba(255,255,255,.7)}
+.btns{display:flex;flex-wrap:wrap;gap:14px}
+
+/* INTRO */
+#intro{position:fixed;inset:0;z-index:100;display:grid;place-items:center;background:url(img/satin.webp) center/cover var(--turq);
+  clip-path:inset(0 0 0 0);transition:clip-path 1.1s var(--ease)}
+#intro.out{clip-path:inset(0 0 100% 0)}
+#intro .mark{display:grid;justify-items:center;gap:clamp(14px,2vw,22px);width:min(560px,78vw)}
+#intro .bf{width:24%;clip-path:inset(100% 0 0 0);transform:translateY(14px) rotate(-6deg);animation:bf 1.4s .25s var(--ease) forwards}
+#intro .wd{width:100%;opacity:0;letter-spacing:.4em;filter:blur(8px);transform:scale(1.06);animation:wd 1.3s 1s var(--ease) forwards}
+#intro .sm{width:48%;opacity:0;animation:fade .9s 1.7s var(--ease) forwards}
+#intro .ln{height:1px;width:0;background:var(--champ);animation:ln 1s 1.9s var(--ease) forwards}
+#intro .skip{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);opacity:.75}
+@keyframes bf{to{clip-path:inset(0 0 0 0);transform:none}}
+@keyframes wd{to{opacity:1;filter:blur(0);transform:none}}
+@keyframes fade{to{opacity:1}}
+@keyframes ln{to{width:120px}}
+
+/* HEADER */
+header{position:fixed;inset:0 0 auto 0;z-index:50;transition:background .5s,box-shadow .5s,padding .5s;
+  background:rgba(2,185,193,.22);-webkit-backdrop-filter:blur(18px) saturate(160%);backdrop-filter:blur(18px) saturate(160%);
+  border-bottom:1px solid rgba(255,255,255,.28)}
+header.solid{background:rgba(2,170,178,.72);box-shadow:0 12px 40px -24px rgba(0,50,54,.7)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:24px;height:84px;transition:height .5s}
+header.solid .nav{height:70px}
+.brand img{height:54px;width:auto;transition:height .5s}
+header.solid .brand img{height:46px}
+.menu{display:flex;gap:clamp(16px,2vw,34px)}
+.menu a{font-size:12.5px;letter-spacing:.24em;text-transform:uppercase;font-variation-settings:"wght" 500;position:relative;padding:6px 0}
+.menu a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--champ);transform:scaleX(0);transition:transform .45s var(--ease)}
+.menu a:hover::after{transform:scaleX(1)}
+.nav .btn{min-height:44px;padding:0 20px}
+.burger{display:none;width:46px;height:46px;position:relative;border:1px solid var(--glass-line);background:var(--glass)}
+.burger span{position:absolute;left:12px;right:12px;height:1px;background:#fff;transition:transform .4s var(--ease),opacity .3s}
+.burger span:nth-child(1){top:17px}.burger span:nth-child(2){top:23px}.burger span:nth-child(3){top:29px}
+.menu-open .burger span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.menu-open .burger span:nth-child(2){opacity:0}
+.menu-open .burger span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+.mnav{position:fixed;inset:0;z-index:49;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:clamp(10px,3vh,26px);overscroll-behavior:contain;
+  padding:110px 24px 40px;overflow-y:auto;
+  background:linear-gradient(rgba(2,150,158,.9),rgba(2,120,128,.94)),url(img/satin.webp) center/cover;
+  opacity:0;visibility:hidden;transition:opacity .5s var(--ease),visibility 0s .5s}
+.menu-open .mnav{opacity:1;visibility:visible;transition:opacity .5s var(--ease)}
+.mnav a:not(.btn){font-family:var(--serif);font-weight:500;font-size:clamp(1.35rem,6vw,1.8rem);letter-spacing:.1em;text-transform:uppercase;line-height:1.2;padding:4px 0;
+  opacity:0;transform:translateY(12px);transition:opacity .5s var(--ease),transform .5s var(--ease)}
+.menu-open .mnav a:not(.btn){opacity:1;transform:none}
+.mnav .rule{margin:6px 0;flex:none}
+.mnav>:first-child{margin-top:auto}.mnav>:last-child{margin-bottom:auto}
+@media (max-height:520px){.mnav{padding-top:96px}.mnav a:not(.btn){font-size:1.2rem}}
+.menu-open header{background:rgba(2,150,158,.9)}
+@media (max-width:1080px){.menu,.nav>.btn{display:none}.burger{display:block}}
+
+/* HERO */
+.hero{min-height:100svh;display:grid;align-items:center;padding-top:110px;padding-bottom:60px;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:clamp(32px,5vw,80px);align-items:center}
+.hero .display{margin:22px 0 26px}
+.hero .lead{margin-bottom:38px;opacity:.95}
+.hero-photo{position:relative;justify-self:end;width:min(100%,520px)}
+.hero-photo .frame{position:absolute;inset:-18px 18px 18px -18px;border:1px solid rgba(215,190,140,.75);pointer-events:none}
+.hero-photo .ph{overflow:hidden;aspect-ratio:3/4;box-shadow:0 40px 80px -40px rgba(0,40,44,.8)}
+.hero-photo img{width:100%;height:112%;object-fit:cover;object-position:50% 0;will-change:transform}
+.hero-sign{display:flex;align-items:center;gap:16px;margin-top:44px}
+.hero-sign .small{opacity:.85}
+.scroll-cue{position:absolute;left:50%;bottom:22px;width:1px;height:54px;background:linear-gradient(rgba(255,255,255,0),#fff);animation:cue 2.4s infinite var(--ease)}
+@keyframes cue{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+@media (max-width:860px){
+  .hero{padding:96px 0 64px;align-items:start;min-height:auto}
+  .hero-grid{grid-template-columns:1fr;gap:34px}
+  .hero-photo{order:-1;justify-self:center;width:100%}
+  .hero-photo .frame{inset:-10px 10px 10px -10px}
+  .hero-photo .ph{aspect-ratio:3/4}
+  .hero-text{text-align:center}
+  .hero-text .lead{margin-inline:auto}
+  .hero .display{font-size:clamp(2.2rem,9.4vw,3.1rem);margin:14px 0 18px}
+  .hero .lead{margin-bottom:26px}
+  .hero .btns .btn{flex:1 1 100%}
+  .hero-sign,.scroll-cue{display:none}
+}
+
+/* MANIFESTO */
+.mani-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(32px,6vw,96px);align-items:center}
+.mani-photo{display:grid;grid-template-columns:1fr;position:relative}
+.mani-photo .ph{aspect-ratio:3/4;overflow:hidden}
+.mani-photo img{width:100%;height:100%;object-fit:cover}
+.mani-photo .tag{position:absolute;right:-1px;bottom:32px;background:var(--turq);color:#fff;padding:18px 26px;font-family:var(--serif);font-size:1.25rem;letter-spacing:.08em;text-transform:uppercase}
+.mani-text .h2{margin:20px 0 28px;font-size:clamp(1.9rem,3.2vw,2.9rem)}
+.mani-text p+p{margin-top:18px}
+.mani-text p{max-width:52ch}
+.mani-text .quote{font-family:var(--serif);font-style:italic;font-size:clamp(1.4rem,2.2vw,1.85rem);line-height:1.3;color:var(--turq-deep);margin-top:30px}
+
+/* SER EU RICCA */
+.ser-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(32px,6vw,90px);align-items:center}
+.ser-photo{aspect-ratio:3/4;overflow:hidden}
+.ser-photo img{width:100%;height:100%;object-fit:cover}
+.ser-text .h2{margin:18px 0 22px}
+.ser-text .lead{margin-bottom:26px}
+.ser-cols{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:8px}
+.ser-cols h4{font-family:var(--serif);font-weight:500;font-size:1.35rem;line-height:1.25;margin-bottom:10px}
+.ser-cols p{font-size:15.5px;font-weight:var(--w-small);opacity:.94}
+.values{display:grid;grid-template-columns:repeat(7,1fr);border-top:1px solid rgba(255,255,255,.35);border-bottom:1px solid rgba(255,255,255,.35);margin-top:clamp(56px,7vw,90px)}
+.values div{padding:26px 10px;text-align:center;border-left:1px solid rgba(255,255,255,.22)}
+.values div:first-child{border-left:0}
+.values .small{display:block;letter-spacing:.24em;text-transform:uppercase;font-size:11.5px;opacity:.85}
+.values b{display:block;font-family:var(--serif);font-weight:500;font-style:italic;font-size:clamp(1.3rem,1.9vw,1.75rem);margin-top:4px}
+.ser-final{margin-top:clamp(48px,6vw,80px)}
+.ser-final p{font-size:1.05rem;opacity:.92}
+.ser-final .display{font-style:italic;text-transform:none;letter-spacing:.01em;font-weight:400;margin-top:8px;font-size:clamp(2.2rem,4.6vw,4rem)}
+
+/* COLEÇÕES */
+.sec-head{display:grid;justify-items:center;text-align:center;gap:18px;margin-bottom:clamp(44px,6vw,72px)}
+.cols{display:grid;grid-template-columns:repeat(5,1fr);gap:clamp(10px,1.4vw,20px)}
+.col{position:relative;display:block;overflow:hidden;aspect-ratio:3/4;color:#fff;isolation:isolate}
+.col img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s var(--ease),filter 1s}
+.col::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(1,80,86,.82));z-index:1;transition:opacity .6s}
+.col .cap{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:22px 18px;text-align:center}
+.col .cap b{display:block;font-family:var(--serif);font-weight:500;font-size:clamp(1.05rem,1.35vw,1.3rem);letter-spacing:.08em;text-transform:uppercase;line-height:1.2}
+.col .cap span{display:inline-block;margin-top:10px;font-size:11.5px;letter-spacing:.28em;text-transform:uppercase;font-variation-settings:"wght" 525;opacity:0;transform:translateY(8px);transition:.6s var(--ease)}
+.col:hover img{transform:scale(1.07)}
+.col:hover .cap span,.col:focus-visible .cap span{opacity:1;transform:none}
+@media (max-width:900px){
+  .cols{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;margin-inline:calc(-1*var(--pad));padding-inline:var(--pad);scrollbar-width:none}
+  .cols::-webkit-scrollbar{display:none}
+  .col{flex:0 0 68vw;scroll-snap-align:center}
+  .col .cap span{opacity:1;transform:none}
+}
+
+/* CARROSSEL */
+.carousel{position:relative;overflow-x:clip;padding-block:30px;margin-block:-30px;--sw:clamp(260px,30vw,400px);--g1:calc(var(--sw)*.86);--g2:calc(var(--sw)*1.52)}
+.stage{position:relative;height:calc(var(--sw)*4/3);touch-action:pan-y;user-select:none;-webkit-user-select:none}
+.slide{position:absolute;top:0;left:50%;width:var(--sw);aspect-ratio:3/4;overflow:hidden;transform:translateX(-50%) scale(.5);opacity:0;pointer-events:none;
+  transition:transform .9s var(--ease),opacity .9s var(--ease),filter .9s;background:rgba(0,0,0,.08);box-shadow:0 34px 60px -34px rgba(0,40,44,.75)}
+.slide img,.slide video{width:100%;height:100%;object-fit:cover;pointer-events:none}
+.slide[data-pos="0"]{transform:translateX(-50%) scale(1);opacity:1;z-index:5;pointer-events:auto}
+.slide[data-pos="1"]{transform:translateX(calc(-50% + var(--g1))) scale(.78);opacity:.6;z-index:4;pointer-events:auto;cursor:pointer;filter:saturate(.75)}
+.slide[data-pos="-1"]{transform:translateX(calc(-50% - var(--g1))) scale(.78);opacity:.6;z-index:4;pointer-events:auto;cursor:pointer;filter:saturate(.75)}
+.slide[data-pos="2"]{transform:translateX(calc(-50% + var(--g2))) scale(.6);opacity:.28;z-index:3}
+.slide[data-pos="-2"]{transform:translateX(calc(-50% - var(--g2))) scale(.6);opacity:.28;z-index:3}
+.ctrl{display:flex;align-items:center;justify-content:center;gap:22px;margin-top:clamp(28px,4vw,44px)}
+.ctrl .count{font-family:var(--serif);font-size:1.15rem;letter-spacing:.14em;min-width:84px;text-align:center}
+.ctrl .btn{width:52px;padding:0}
+.ctrl svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.2}
+.bar{width:min(300px,60%);height:1px;background:rgba(255,255,255,.3);margin:18px auto 0;position:relative;overflow:hidden}
+.light .bar{background:rgba(2,127,134,.2)}
+.bar i{position:absolute;inset:0;background:var(--champ);transform-origin:left;transform:scaleX(0)}
+@media (max-width:760px){.carousel{--sw:64vw;--g1:calc(var(--sw)*.8);--g2:calc(var(--sw)*1.4)}.slide[data-pos="2"],.slide[data-pos="-2"]{opacity:0}}
+
+/* QUALIDADE */
+.q-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,90px);align-items:center}
+.q-photo{aspect-ratio:3/4;overflow:hidden;position:relative}
+.q-photo img{width:100%;height:100%;object-fit:cover}
+.q-text .h2{margin:18px 0 22px}
+.q-list{display:grid;grid-template-columns:1fr 1fr;margin-top:40px;border-top:1px solid rgba(2,127,134,.25)}
+.q-list div{padding:28px 22px 28px 0;border-bottom:1px solid rgba(2,127,134,.25)}
+.q-list div:nth-child(even){padding-left:22px;border-left:1px solid rgba(2,127,134,.25)}
+.q-list b{display:block;font-family:var(--serif);font-weight:600;font-size:clamp(1.15rem,1.6vw,1.4rem);letter-spacing:.06em;text-transform:uppercase;line-height:1.2;color:var(--turq-deep)}
+.q-list span{display:block;margin-top:8px;font-size:14.5px;font-weight:var(--w-small)}
+
+/* ATACADO */
+.at-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(32px,6vw,90px);align-items:center}
+.at-photo{position:relative;aspect-ratio:3/4;overflow:hidden}
+.at-photo img{width:100%;height:100%;object-fit:cover}
+.at-text .display{font-size:clamp(2.2rem,4.4vw,4rem);margin:20px 0 26px}
+.at-list{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,.3);border:1px solid rgba(255,255,255,.3);margin:34px 0 38px}
+.at-list div{background:rgba(2,140,148,.35);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);padding:22px 20px}
+.at-list b{display:block;font-family:var(--serif);font-weight:500;font-size:1.25rem;letter-spacing:.04em;line-height:1.25}
+.at-list span{display:block;font-size:14px;font-weight:var(--w-small);opacity:.9;margin-top:4px}
+
+/* CEO */
+.ceo-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:clamp(32px,6vw,96px);align-items:center}
+.ceo-photo{position:relative}
+.ceo-photo .ph{aspect-ratio:3/4;overflow:hidden}
+.ceo-photo img{width:100%;height:100%;object-fit:cover}
+.ceo-photo .frame{position:absolute;inset:18px -18px -18px 18px;border:1px solid var(--champ);z-index:-1}
+.ceo-name{font-family:var(--serif);font-weight:500;text-transform:uppercase;letter-spacing:.06em;line-height:.95;font-size:clamp(3rem,7vw,6.2rem);color:var(--turq-deep);margin:16px 0 12px}
+.ceo-role{font-size:12.5px;letter-spacing:.3em;text-transform:uppercase;font-variation-settings:"wght" 525}
+.ceo-title{font-family:var(--serif);font-weight:500;font-size:clamp(1.35rem,2.1vw,1.8rem);line-height:1.3;margin:34px 0 22px;max-width:30ch}
+.ceo-quote{font-family:var(--serif);font-style:italic;font-size:clamp(1.12rem,1.5vw,1.3rem);line-height:1.6;border-left:1px solid var(--champ);padding-left:26px}
+.ceo-quote p+p{margin-top:14px}
+.ceo-sign{margin-top:28px;display:flex;gap:16px;align-items:center}
+.ceo-sign b{font-family:var(--serif);font-size:1.25rem;letter-spacing:.12em;font-weight:600}
+
+/* JOÃO PESSOA */
+.jp{overflow:hidden;background:linear-gradient(rgba(1,92,98,.45),rgba(1,92,98,.45))}
+.jp-grid{display:grid;grid-template-columns:1fr minmax(260px,380px) 1fr;gap:clamp(28px,4vw,64px);align-items:center}
+.jp-video{aspect-ratio:3/4;overflow:hidden;position:relative;box-shadow:0 40px 80px -40px rgba(0,30,34,.9)}
+.jp-video video{width:100%;height:100%;object-fit:cover}
+.jp .display{font-size:clamp(2.4rem,4.6vw,4.4rem)}
+.jp-right p+p{margin-top:16px}
+.jp-sign{margin-top:28px;font-family:var(--serif);font-size:1.2rem;letter-spacing:.14em;text-transform:uppercase}
+.jp-left{text-align:right}
+.jp-left .rule{margin-left:auto;margin-top:26px}
+
+/* CONTATO */
+.ct-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,90px);align-items:stretch}
+.ct-photo{aspect-ratio:3/4;overflow:hidden}
+.ct-photo img{width:100%;height:100%;object-fit:cover}
+.ct-info{display:flex;flex-direction:column;justify-content:center}
+.ct-info .h2{margin:18px 0 30px}
+.ct-rows{border-top:1px solid rgba(2,127,134,.25)}
+.ct-rows>div{display:grid;grid-template-columns:130px 1fr;gap:18px;padding:18px 0;border-bottom:1px solid rgba(2,127,134,.25)}
+.ct-rows dt{font-size:12px;letter-spacing:.26em;text-transform:uppercase;font-variation-settings:"wght" 525;color:var(--turq-deep);padding-top:3px}
+.ct-rows dd{font-size:16px}
+.ct-rows dd a{border-bottom:1px solid rgba(2,127,134,.35)}
+.hours{display:grid;grid-template-columns:auto 1fr;column-gap:22px}
+.ct-info .btns{margin-top:32px}
+.map{position:relative;margin-top:clamp(40px,5vw,64px);height:clamp(300px,34vw,420px);background:var(--turq-deep);overflow:hidden}
+.map .fallback{position:absolute;inset:0;display:grid;place-items:center;text-align:center;color:#fff;padding:24px;background:url(img/satin.webp) center/cover}
+.map .fallback .btn{color:#fff;background:var(--glass);border-color:var(--glass-line)}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:saturate(.85)}
+
+/* FOOTER */
+footer{background:rgba(1,80,86,.55);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);padding:clamp(64px,8vw,100px) 0 30px}
+.f-top{display:grid;justify-items:center;text-align:center;gap:22px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,.22)}
+.f-top img{width:min(300px,70vw)}
+.f-top .quote{font-family:var(--serif);font-style:italic;font-size:clamp(1.3rem,2vw,1.7rem)}
+.f-cols{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;padding:44px 0}
+.f-cols h5{font-size:12px;letter-spacing:.28em;text-transform:uppercase;font-variation-settings:"wght" 525;color:var(--champ);margin-bottom:14px;font-weight:500}
+.f-cols p,.f-cols a{display:block;font-size:14.5px;font-weight:var(--w-small);line-height:1.9;opacity:.92}
+.f-cols a:hover{opacity:1;color:var(--champ)}
+.f-bottom{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:24px;border-top:1px solid rgba(255,255,255,.22)}
+.f-bottom .small{opacity:.8;font-size:12.5px}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(28px);transition:opacity 1.1s var(--ease),transform 1.1s var(--ease)}
+.rv.in{opacity:1;transform:none}
+.rv.d1{transition-delay:.12s}.rv.d2{transition-delay:.24s}.rv.d3{transition-delay:.36s}
+.split .ln-mask{display:block;overflow:hidden}
+.split .ln-mask>span{display:block;transform:translateY(105%);transition:transform 1.2s var(--ease)}
+.split.in .ln-mask>span{transform:none}
+.split.in .ln-mask:nth-child(2)>span{transition-delay:.1s}
+.split.in .ln-mask:nth-child(3)>span{transition-delay:.2s}
+.split.in .ln-mask:nth-child(4)>span{transition-delay:.3s}
+
+@media (max-width:900px){
+  .mani-grid,.ser-grid,.q-grid,.at-grid,.ceo-grid,.ct-grid{grid-template-columns:1fr}
+  .mani-photo{order:2}
+  .values{grid-template-columns:repeat(2,1fr)}
+  .values div{border-left:0;border-top:1px solid rgba(255,255,255,.22)}
+  .values div:nth-child(even){border-left:1px solid rgba(255,255,255,.22)}
+  .values div:nth-child(-n+2){border-top:0}
+  .values div:last-child{grid-column:1/-1}
+  .ser-cols{grid-template-columns:1fr}
+  .jp-grid{grid-template-columns:1fr;text-align:center}
+  .jp-left{text-align:center}.jp-left .rule{margin-inline:auto}
+  .jp-video{width:min(78vw,380px);margin-inline:auto}
+  .f-cols{grid-template-columns:1fr 1fr}
+  .ceo-photo .frame{inset:12px -10px -12px 10px}
+  .hero-photo .frame{inset:-10px 10px 10px -10px}
+}
+@media (max-width:520px){
+  body{font-size:16px}
+  .q-list{grid-template-columns:1fr}
+  .q-list div:nth-child(even){padding-left:0;border-left:0}
+  .at-list{grid-template-columns:1fr}
+  .ct-rows>div{grid-template-columns:1fr;gap:6px}
+  .f-cols{grid-template-columns:1fr;text-align:center}
+  .btns .btn{flex:1 1 100%}
+  .mani-photo .tag{font-size:1rem;padding:14px 18px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-delay:0s!important;transition-duration:.01ms!important}
+  .rv,.split .ln-mask>span{opacity:1;transform:none}
+}
+</style>
+</head>
+<body class="locked">
+<div class="satin" aria-hidden="true"></div>
+
+<!-- INTRO -->
+<div id="intro" role="presentation">
+  <div class="mark">
+    <img class="bf" src="img/logo-butterfly.png" alt="">
+    <img class="wd" src="img/logo-word.png" alt="Eu Ricca">
+    <img class="sm" src="img/logo-semi.png" alt="Semijoias">
+    <div class="ln"></div>
+  </div>
+  <button class="skip small" type="button">Pular</button>
+</div>
+
+<!-- HEADER -->
+<header id="top">
+  <div class="wrap nav">
+    <a class="brand" href="#inicio" aria-label="Eu Ricca Semijoias — início"><img src="img/logo-full.png" alt="Eu Ricca Semijoias"></a>
+    <nav class="menu" aria-label="Principal">
+      <a href="#inicio">Início</a><a href="#colecoes">Coleções</a><a href="#a-marca">A Marca</a><a href="#atacado">Atacado</a><a href="#nossa-historia">Nossa História</a><a href="#contato">Contato</a>
+    </nav>
+    <a class="btn" href="#a-marca">Descubra Euricca</a>
+    <button class="burger" type="button" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<nav class="mnav" aria-label="Menu móvel">
+    <a href="#inicio">Início</a><a href="#colecoes">Coleções</a><a href="#a-marca">A Marca</a><a href="#atacado">Atacado</a><a href="#nossa-historia">Nossa História</a><a href="#contato">Contato</a>
+    <hr class="rule"><a class="btn" href="#a-marca">Descubra Euricca</a>
+  </nav>
+
+<main>
+<!-- HERO -->
+<section class="hero" id="inicio">
+  <div class="wrap hero-grid">
+    <div class="hero-text">
+      <span class="kicker rv">Eu Ricca Semijoias · Varejo e Atacado</span>
+      <h1 class="display split"><span class="ln-mask"><span>A verdadeira</span></span><span class="ln-mask"><span>riqueza começa</span></span><span class="ln-mask"><span>em você.</span></span></h1>
+      <p class="lead rv d1">Mais do que semijoias, expressões de beleza, personalidade e conquistas.</p>
+      <div class="btns rv d2">
+        <a class="btn solid" href="#a-marca">Conheça a Euricca</a>
+        <a class="btn" href="#atacado">Seja uma revendedora</a>
+      </div>
+      <div class="hero-sign rv d3"><hr class="rule"><span class="small">Folheadas a ouro 18k e ródio · 1 ano de garantia</span></div>
+    </div>
+    <div class="hero-photo">
+      <div class="frame" aria-hidden="true"></div>
+      <div class="ph"><img src="img/hero.webp" alt="Mulher usando ear cuff, colares e bracelete dourados Eu Ricca" fetchpriority="high" data-parallax></div>
+    </div>
+  </div>
+  <div class="scroll-cue" aria-hidden="true"></div>
+</section>
+
+<!-- MANIFESTO -->
+<section class="sec light" id="a-marca">
+  <div class="wrap mani-grid">
+    <div class="mani-photo rv">
+      <div class="ph"><img src="img/manifesto.webp" alt="Argolas torcidas douradas sobre cetim turquesa" loading="lazy"></div>
+      <span class="tag">Feita de detalhes</span>
+    </div>
+    <div class="mani-text">
+      <span class="kicker rv">Manifesto</span>
+      <h2 class="h2 split"><span class="ln-mask"><span>Não é apenas sobre</span></span><span class="ln-mask"><span>o que você usa.</span></span><span class="ln-mask"><span>É sobre o que você</span></span><span class="ln-mask"><span>representa.</span></span></h2>
+      <p class="rv">A beleza está nos detalhes. Na escolha de uma peça, na confiança de quem a usa e na personalidade de quem sabe exatamente o que deseja transmitir.</p>
+      <p class="rv d1">A Eu Ricca nasceu para realçar aquilo que já existe de mais precioso: você.</p>
+      <p class="quote rv d2">Semijoias que acompanham histórias, celebram momentos e transformam o cotidiano em algo extraordinário.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SER EU RICCA -->
+<section class="sec" id="ser-eu-ricca">
+  <div class="wrap">
+    <div class="ser-grid">
+      <div class="ser-photo rv"><img src="img/ser.webp" alt="Modelo com gargantilha e brincos dourados Eu Ricca" loading="lazy"></div>
+      <div class="ser-text">
+        <span class="kicker rv">Ser Eu Ricca</span>
+        <h2 class="h2 split"><span class="ln-mask"><span>O que significa</span></span><span class="ln-mask"><span>ser Eu Ricca?</span></span></h2>
+        <p class="lead rv">Talvez a primeira coisa que venha à sua mente seja dinheiro. Mas a nossa riqueza vai muito além do que podemos ter.</p>
+        <div class="ser-cols">
+          <div class="rv d1"><h4>Eu Ricca é sobre quem você é.</h4><p>Ser Eu Ricca é se olhar no espelho e reconhecer o seu valor. É se cuidar, se valorizar e nunca esquecer que você merece se sentir linda e especial.</p></div>
+          <div class="rv d2"><h4>Muito mais do que acessórios.</h4><p>Cada peça é um lembrete do valor que já existe em você. Elas trazem autoestima, feminilidade, força e a liberdade de uma mulher expressar quem ela é.</p></div>
+        </div>
+      </div>
+    </div>
+    <div class="values rv" role="list">
+      <div role="listitem"><span class="small">Rica de</span><b>fé</b></div>
+      <div role="listitem"><span class="small">Rica de</span><b>coragem</b></div>
+      <div role="listitem"><span class="small">Rica de</span><b>sonhos</b></div>
+      <div role="listitem"><span class="small">Rica de</span><b>amor</b></div>
+      <div role="listitem"><span class="small">Rica de</span><b>histórias</b></div>
+      <div role="listitem"><span class="small">Rica de</span><b>conquistas</b></div>
+      <div role="listitem"><span class="small">Rica de</span><b>propósito</b></div>
+    </div>
+    <div class="ser-final center rv">
+      <p>Porque a verdadeira riqueza não começa no que você tem.</p>
+      <p class="display">A verdadeira riqueza começa em você.</p>
+    </div>
+  </div>
+</section>
+
+<!-- COLEÇÕES -->
+<section class="sec light" id="colecoes">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker rv">Coleções</span>
+      <h2 class="h2 split"><span class="ln-mask"><span>A elegância está nos detalhes.</span></span></h2>
+      <hr class="rule rv">
+    </div>
+    <div class="cols">
+      <a class="col rv" href="https://www.instagram.com/euriccasemijoias/" target="_blank" rel="noopener"><img src="img/col-brincos.webp" alt="Brinco dourado escultural" loading="lazy"><span class="cap"><b>Brincos e Argolas</b><span>Ver no Instagram</span></span></a>
+      <a class="col rv d1" href="https://www.instagram.com/euriccasemijoias/" target="_blank" rel="noopener"><img src="img/col-colares.webp" alt="Colar com pingente de abelha cravejado" loading="lazy"><span class="cap"><b>Colares e Gargantilhas</b><span>Ver no Instagram</span></span></a>
+      <a class="col rv d2" href="https://www.instagram.com/euriccasemijoias/" target="_blank" rel="noopener"><img src="img/col-aneis.webp" alt="Anel dourado trançado com zircônias" loading="lazy"><span class="cap"><b>Anéis</b><span>Ver no Instagram</span></span></a>
+      <a class="col rv d3" href="https://www.instagram.com/euriccasemijoias/" target="_blank" rel="noopener"><img src="img/col-pulseiras.webp" alt="Pulseiras douradas e anéis em mão feminina" loading="lazy"><span class="cap"><b>Pulseiras</b><span>Ver no Instagram</span></span></a>
+      <a class="col rv d3" href="https://www.instagram.com/euriccasemijoias/" target="_blank" rel="noopener"><img src="img/col-conjuntos.webp" alt="Composição de ear cuff, colares e braceletes" loading="lazy"><span class="cap"><b>Conjuntos</b><span>Ver no Instagram</span></span></a>
+    </div>
+  </div>
+</section>
+
+<!-- EDITORIAL (pessoa + produto) -->
+<section class="sec" id="editorial">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker rv">Editorial</span>
+      <h2 class="h2 split"><span class="ln-mask"><span>Peças que ganham vida em você.</span></span></h2>
+      <hr class="rule rv">
+    </div>
+  </div>
+  <div class="carousel rv" data-auto="5200" aria-roledescription="carrossel" aria-label="Editorial Eu Ricca">
+    <div class="stage">
+      <figure class="slide"><img src="img/e1.webp" alt="Argola dourada em retrato de perfil" loading="lazy"></figure>
+      <figure class="slide"><img src="img/e2.webp" alt="Brinco losango dourado" loading="lazy"></figure>
+      <figure class="slide"><img src="img/e3.webp" alt="Argolas douradas texturizadas" loading="lazy"></figure>
+      <figure class="slide"><img src="img/e4.webp" alt="Brinco flor prateado" loading="lazy"></figure>
+      <figure class="slide"><img src="img/e5.webp" alt="Argola espiral dourada" loading="lazy"></figure>
+      <figure class="slide"><img src="img/e6.webp" alt="Brinco orgânico prateado" loading="lazy"></figure>
+      <figure class="slide"><img src="img/e7.webp" alt="Brincos e anel dourados em retrato" loading="lazy"></figure>
+    </div>
+    <div class="ctrl"><button class="btn prev" type="button" aria-label="Anterior"><svg viewBox="0 0 24 24"><path d="M15 4 7 12l8 8"/></svg></button><span class="count"></span><button class="btn next" type="button" aria-label="Próxima"><svg viewBox="0 0 24 24"><path d="m9 4 8 8-8 8"/></svg></button></div>
+    <div class="bar"><i></i></div>
+  </div>
+</section>
+
+<!-- QUALIDADE -->
+<section class="sec light" id="qualidade">
+  <div class="wrap q-grid">
+    <div class="q-text">
+      <span class="kicker rv">Qualidade e exclusividade</span>
+      <h2 class="h2 split"><span class="ln-mask"><span>Sua beleza</span></span><span class="ln-mask"><span>merece durar.</span></span></h2>
+      <p class="lead rv">Semijoias folheadas a ouro 18k e ródio, desenvolvidas para acompanhar você em todos os momentos.</p>
+      <div class="q-list">
+        <div class="rv"><b>1 ano de garantia</b><span>Tranquilidade em cada peça que você escolhe.</span></div>
+        <div class="rv d1"><b>Ouro 18k e ródio</b><span>Banho que realça o brilho e o acabamento.</span></div>
+        <div class="rv d2"><b>Para cada ocasião</b><span>Do dia a dia aos momentos especiais.</span></div>
+        <div class="rv d3"><b>Envio para todo o Brasil</b><span>De Caruaru para onde você estiver.</span></div>
+      </div>
+    </div>
+    <div class="q-photo rv"><img src="img/qualidade.webp" alt="Anel cravejado com baguetes azuis sobre cetim turquesa" loading="lazy"></div>
+  </div>
+</section>
+
+<!-- VITRINE (só produto) -->
+<section class="sec" id="vitrine">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker rv">Vitrine</span>
+      <h2 class="h2 split"><span class="ln-mask"><span>O universo Euricca, todos os dias.</span></span></h2>
+      <hr class="rule rv">
+    </div>
+  </div>
+  <div class="carousel rv" data-auto="4600" aria-roledescription="carrossel" aria-label="Vitrine de peças">
+    <div class="stage">
+      <figure class="slide"><img src="img/p1.webp" alt="Anel prateado com baguetes cruzadas" loading="lazy"></figure>
+      <figure class="slide"><img src="img/p2.webp" alt="Brincos gota prateados" loading="lazy"></figure>
+      <figure class="slide"><img src="img/p3.webp" alt="Brincos losango dourados" loading="lazy"></figure>
+      <figure class="slide"><img src="img/p4.webp" alt="Brincos tartaruga prateados na areia" loading="lazy"></figure>
+      <figure class="slide"><img src="img/p5.webp" alt="Brincos trançados dourados sobre cetim" loading="lazy"></figure>
+      <figure class="slide"><img src="img/p6.webp" alt="Brincos orgânicos prateados" loading="lazy"></figure>
+      <figure class="slide"><img src="img/p7.webp" alt="Brincos trevo dourados" loading="lazy"></figure>
+      <figure class="slide"><img src="img/p8.webp" alt="Bracelete de corações cravejado" loading="lazy"></figure>
+      <figure class="slide"><img src="img/p9.webp" alt="Brincos concha dourado e prateado" loading="lazy"></figure>
+      <figure class="slide"><img src="img/p10.webp" alt="Argolas concha caracol douradas na areia" loading="lazy"></figure>
+    </div>
+    <div class="ctrl"><button class="btn prev" type="button" aria-label="Anterior"><svg viewBox="0 0 24 24"><path d="M15 4 7 12l8 8"/></svg></button><span class="count"></span><button class="btn next" type="button" aria-label="Próxima"><svg viewBox="0 0 24 24"><path d="m9 4 8 8-8 8"/></svg></button></div>
+    <div class="bar"><i></i></div>
+  </div>
+  <div class="center rv" style="margin-top:40px"><a class="btn solid" href="https://www.instagram.com/euriccasemijoias/" target="_blank" rel="noopener">Acompanhe nossa história</a></div>
+</section>
+
+<!-- VÍDEOS -->
+<section class="sec light" id="videos">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker rv">Em movimento</span>
+      <h2 class="h2 split"><span class="ln-mask"><span>O brilho que só o movimento revela.</span></span></h2>
+      <hr class="rule rv">
+    </div>
+  </div>
+  <div class="carousel rv" data-auto="7000" data-video aria-roledescription="carrossel" aria-label="Vídeos Eu Ricca">
+    <div class="stage">
+      <figure class="slide"><video src="vid/v1.mp4" poster="vid/v1.jpg" muted loop playsinline preload="none"></video></figure>
+      <figure class="slide"><video src="vid/v2.mp4" poster="vid/v2.jpg" muted loop playsinline preload="none"></video></figure>
+      <figure class="slide"><video src="vid/v4.mp4" poster="vid/v4.jpg" muted loop playsinline preload="none"></video></figure>
+      <figure class="slide"><video src="vid/v5.mp4" poster="vid/v5.jpg" muted loop playsinline preload="none"></video></figure>
+      <figure class="slide"><video src="vid/v3.mp4" poster="vid/v3.jpg" muted loop playsinline preload="none"></video></figure>
+      <figure class="slide"><video src="vid/v6.mp4" poster="vid/v6.jpg" muted loop playsinline preload="none"></video></figure>
+      <figure class="slide"><video src="vid/v7.mp4" poster="vid/v7.jpg" muted loop playsinline preload="none"></video></figure>
+      <figure class="slide"><video src="vid/v9.mp4" poster="vid/v9.jpg" muted loop playsinline preload="none"></video></figure>
+      <figure class="slide"><video src="vid/v8.mp4" poster="vid/v8.jpg" muted loop playsinline preload="none"></video></figure>
+    </div>
+    <div class="ctrl"><button class="btn prev" type="button" aria-label="Anterior"><svg viewBox="0 0 24 24"><path d="M15 4 7 12l8 8"/></svg></button><span class="count"></span><button class="btn next" type="button" aria-label="Próximo"><svg viewBox="0 0 24 24"><path d="m9 4 8 8-8 8"/></svg></button></div>
+    <div class="bar"><i></i></div>
+  </div>
+</section>
+
+<!-- ATACADO -->
+<section class="sec" id="atacado">
+  <div class="wrap at-grid">
+    <div class="at-text">
+      <span class="kicker rv">Atacado e empreendedorismo feminino</span>
+      <h2 class="display split"><span class="ln-mask"><span>Seu próximo</span></span><span class="ln-mask"><span>grande negócio</span></span><span class="ln-mask"><span>pode começar</span></span><span class="ln-mask"><span>com um detalhe.</span></span></h2>
+      <p class="rv">Acreditamos na força de mulheres que sonham, realizam e constroem seu próprio caminho.</p>
+      <p class="rv d1" style="margin-top:14px">Descubra o universo Eu Ricca e encontre oportunidades para transformar sua paixão por semijoias em um negócio.</p>
+      <div class="at-list rv d2">
+        <div><b>Oportunidade de revenda</b><span>Comece com uma marca que você tem orgulho de mostrar.</span></div>
+        <div><b>Variedade de peças</b><span>Brincos, colares, anéis, pulseiras e conjuntos.</span></div>
+        <div><b>Atendimento para atacado</b><span>Acompanhamento direto com a equipe Eu Ricca.</span></div>
+        <div><b>Seu próprio negócio</b><span>Construa uma renda com independência.</span></div>
+      </div>
+      <div class="btns rv d3"><a class="btn solid" href="https://www.instagram.com/euriccasemijoias/" target="_blank" rel="noopener">Quero ser revendedora</a></div>
+    </div>
+    <div class="at-photo rv"><img src="img/atacado.webp" alt="Mulher confiante usando colares, brincos e anéis dourados" loading="lazy"></div>
+  </div>
+</section>
+
+<!-- CEO -->
+<section class="sec light" id="nossa-historia">
+  <div class="wrap ceo-grid">
+    <div class="ceo-photo rv">
+      <div class="frame" aria-hidden="true"></div>
+      <div class="ph"><img src="img/ceo.webp" alt="Juliana Leão, CEO da Eu Ricca Semijoias" loading="lazy"></div>
+    </div>
+    <div class="ceo-text">
+      <span class="kicker rv">A mulher por trás da marca</span>
+      <h2 class="ceo-name split"><span class="ln-mask"><span>Juliana</span></span><span class="ln-mask"><span>Leão</span></span></h2>
+      <span class="ceo-role rv">CEO — Eu Ricca Semijoias</span>
+      <p class="ceo-title rv d1">Uma história construída com coragem. Uma marca construída com propósito.</p>
+      <blockquote class="ceo-quote rv d2">
+        <p>“Eu não construí a EURICCA para ter uma empresa. Eu construí para deixar uma marca.</p>
+        <p>Por trás de cada decisão existe coragem. Por trás de cada conquista, renúncia. E por trás da mulher que aparece nessa foto, existe uma história que ninguém viveu por ela.</p>
+        <p>Eu sei quem eu sou. Sei o que estou construindo. E sei onde quero chegar.</p>
+        <p>Isso é só o começo. 🦋✨”</p>
+      </blockquote>
+      <div class="ceo-sign rv d3"><hr class="rule"><b>JULIANA LEÃO</b></div>
+    </div>
+  </div>
+</section>
+
+<!-- CEO COM CLIENTES -->
+<section class="sec" id="juliana-e-clientes">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker rv">De perto</span>
+      <h2 class="h2 split"><span class="ln-mask"><span>Juliana e as clientes.</span></span></h2>
+      <hr class="rule rv">
+    </div>
+  </div>
+  <div class="carousel rv" data-auto="4800" aria-roledescription="carrossel" aria-label="Juliana Leão com clientes">
+    <div class="stage">
+      <figure class="slide"><img src="img/cc1.webp" alt="Juliana Leão com cliente na loja" loading="lazy"></figure>
+      <figure class="slide"><img src="img/cc2.webp" alt="Juliana Leão com cliente segurando sacolas Eu Ricca" loading="lazy"></figure>
+      <figure class="slide"><img src="img/cc3.webp" alt="Juliana Leão com cliente diante da vitrine" loading="lazy"></figure>
+      <figure class="slide"><img src="img/cc4.webp" alt="Juliana Leão com cliente na loja" loading="lazy"></figure>
+      <figure class="slide"><img src="img/cc5.webp" alt="Juliana Leão com duas clientes" loading="lazy"></figure>
+      <figure class="slide"><img src="img/cc6.webp" alt="Juliana Leão com cliente na loja" loading="lazy"></figure>
+      <figure class="slide"><img src="img/cc7.webp" alt="Juliana Leão com nova empreendedora Eu Ricca" loading="lazy"></figure>
+    </div>
+    <div class="ctrl"><button class="btn prev" type="button" aria-label="Anterior"><svg viewBox="0 0 24 24"><path d="M15 4 7 12l8 8"/></svg></button><span class="count"></span><button class="btn next" type="button" aria-label="Próxima"><svg viewBox="0 0 24 24"><path d="m9 4 8 8-8 8"/></svg></button></div>
+    <div class="bar"><i></i></div>
+  </div>
+</section>
+
+<!-- RICCAS -->
+<section class="sec light" id="riccas">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker rv">Clientes Eu Ricca</span>
+      <h2 class="display split" style="color:var(--turq-deep)"><span class="ln-mask"><span>Riccas</span></span></h2>
+      <p class="lead rv">Mulheres reais, peças Eu Ricca e muita personalidade.</p>
+      <hr class="rule rv">
+    </div>
+  </div>
+  <div class="carousel rv" data-auto="4400" aria-roledescription="carrossel" aria-label="Riccas — clientes Eu Ricca">
+    <div class="stage">
+      <figure class="slide"><img src="img/r1.webp" alt="Cliente usando anéis, colares e brincos Eu Ricca" loading="lazy"></figure>
+      <figure class="slide"><img src="img/r7.webp" alt="Cliente Eu Ricca" loading="lazy"></figure>
+      <figure class="slide"><img src="img/r2.webp" alt="Cliente com anéis e colar Eu Ricca" loading="lazy"></figure>
+      <figure class="slide"><img src="img/r10.webp" alt="Cliente com gargantilha Eu Ricca" loading="lazy"></figure>
+      <figure class="slide"><img src="img/r3.webp" alt="Cliente na loja Eu Ricca" loading="lazy"></figure>
+      <figure class="slide"><img src="img/r5.webp" alt="Cliente experimentando peças Eu Ricca" loading="lazy"></figure>
+      <figure class="slide"><img src="img/r11.webp" alt="Cliente com brincos dourados" loading="lazy"></figure>
+      <figure class="slide"><img src="img/r6.webp" alt="Cliente Eu Ricca na loja" loading="lazy"></figure>
+      <figure class="slide"><img src="img/r12.webp" alt="Cliente com ear cuff" loading="lazy"></figure>
+      <figure class="slide"><img src="img/r8.webp" alt="Cliente com pulseiras Eu Ricca" loading="lazy"></figure>
+      <figure class="slide"><img src="img/r4.webp" alt="Cliente com tornozeleira Eu Ricca" loading="lazy"></figure>
+    </div>
+    <div class="ctrl"><button class="btn prev" type="button" aria-label="Anterior"><svg viewBox="0 0 24 24"><path d="M15 4 7 12l8 8"/></svg></button><span class="count"></span><button class="btn next" type="button" aria-label="Próxima"><svg viewBox="0 0 24 24"><path d="m9 4 8 8-8 8"/></svg></button></div>
+    <div class="bar"><i></i></div>
+  </div>
+</section>
+
+<!-- JOÃO PESSOA -->
+<section class="sec jp" id="joao-pessoa">
+  <div class="wrap jp-grid">
+    <div class="jp-left">
+      <span class="kicker rv">Novo capítulo</span>
+      <h2 class="display split" style="margin-top:18px"><span class="ln-mask"><span>João Pessoa,</span></span><span class="ln-mask"><span>estamos</span></span><span class="ln-mask"><span>chegando!</span></span></h2>
+      <hr class="rule rv">
+    </div>
+    <div class="jp-video rv"><video src="vid/jp.mp4" poster="vid/jp.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Campanha Eu Ricca à beira-mar"></video></div>
+    <div class="jp-right">
+      <p class="rv">Um novo capítulo da Eu Ricca Semijoias está prestes a começar.</p>
+      <p class="rv d1">Novos sonhos, novos caminhos e a mesma essência que nos trouxe até aqui.</p>
+      <p class="rv d2">Uma história que continua crescendo, levando beleza, elegância e novas possibilidades para ainda mais mulheres.</p>
+      <p class="jp-sign rv d3">Eu Ricca. O próximo capítulo começa aqui.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTATO -->
+<section class="sec light" id="contato">
+  <div class="wrap">
+    <div class="ct-grid">
+      <div class="ct-photo rv"><img src="img/fachada.webp" alt="Fachada da loja Eu Ricca Semijoias em Caruaru" loading="lazy"></div>
+      <div class="ct-info">
+        <span class="kicker rv">Contato e localização</span>
+        <h2 class="h2 split"><span class="ln-mask"><span>Será um prazer ter você</span></span><span class="ln-mask"><span>no universo Euricca.</span></span></h2>
+        <dl class="ct-rows rv d1">
+          <div><dt>Loja</dt><dd>EU RICCA SEMIJOIAS<br>Varejo e Atacado</dd></div>
+          <div><dt>Endereço</dt><dd>Av. Agamenon Magalhães — Maurício de Nassau, Caruaru – PE, 55012-290</dd></div>
+          <div><dt>Horários</dt><dd class="hours"><span>Segunda a sexta</span><span>09h às 18h</span><span>Sábado</span><span>09h às 13h</span><span>Domingo</span><span>Fechado</span></dd></div>
+          <div><dt>E-mail</dt><dd><a href="mailto:euriccasemijoias@gmail.com">euriccasemijoias@gmail.com</a></dd></div>
+          <div><dt>Instagram</dt><dd><a href="https://www.instagram.com/euriccasemijoias/" target="_blank" rel="noopener">@euriccasemijoias</a></dd></div>
+        </dl>
+        <div class="btns rv d2">
+          <a class="btn solid" href="https://www.instagram.com/euriccasemijoias/" target="_blank" rel="noopener">Falar pelo Instagram</a>
+          <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Av.+Agamenon+Magalh%C3%A3es+Maur%C3%ADcio+de+Nassau+Caruaru+PE+55012-290" target="_blank" rel="noopener">Como chegar</a>
+        </div>
+      </div>
+    </div>
+    <div class="map rv">
+      <div class="fallback"><div><p class="h3">Av. Agamenon Magalhães — Caruaru, PE</p><a class="btn" style="margin-top:18px" href="https://www.google.com/maps/search/?api=1&query=Av.+Agamenon+Magalh%C3%A3es+Maur%C3%ADcio+de+Nassau+Caruaru+PE+55012-290" target="_blank" rel="noopener">Abrir no Google Maps</a></div></div>
+      <iframe title="Mapa da loja Eu Ricca Semijoias" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Av.+Agamenon+Magalh%C3%A3es+-+Maur%C3%ADcio+de+Nassau,+Caruaru+-+PE,+55012-290&output=embed"></iframe>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="f-top">
+      <img src="img/logo-full.png" alt="Eu Ricca Semijoias" loading="lazy">
+      <p class="quote">A verdadeira riqueza começa em você.</p>
+    </div>
+    <div class="f-cols">
+      <div><h5>Navegação</h5><a href="#inicio">Início</a><a href="#colecoes">Coleções</a><a href="#a-marca">A Marca</a><a href="#atacado">Atacado</a><a href="#nossa-historia">Nossa História</a><a href="#contato">Contato</a></div>
+      <div><h5>Atendimento</h5><a href="https://www.instagram.com/euriccasemijoias/" target="_blank" rel="noopener">@euriccasemijoias</a><a href="mailto:euriccasemijoias@gmail.com">euriccasemijoias@gmail.com</a></div>
+      <div><h5>Endereço</h5><p>Av. Agamenon Magalhães — Maurício de Nassau<br>Caruaru – PE, 55012-290</p></div>
+      <div><h5>Horários</h5><p>Seg. a sex.: 09h às 18h<br>Sábado: 09h às 13h<br>Domingo: fechado</p></div>
+    </div>
+    <div class="f-bottom"><span class="small">© <span id="yr">2026</span> Eu Ricca Semijoias · Varejo e Atacado. Todos os direitos reservados.</span><span class="small">Enviamos para todo o Brasil · Garantia de 1 ano</span></div>
+  </div>
+</footer>
+
+<script>
+(()=>{
+const $=(s,c=document)=>c.querySelector(s), $$=(s,c=document)=>[...c.querySelectorAll(s)];
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+$('#yr').textContent=new Date().getFullYear();
+
+/* intro */
+const intro=$('#intro');
+function endIntro(){ if(!intro||intro.classList.contains('out'))return; intro.classList.add('out'); document.body.classList.remove('locked');
+  setTimeout(()=>{intro.remove(); revealHero();},1150); }
+setTimeout(endIntro, reduce?300:3300);
+$('.skip',intro).addEventListener('click',endIntro);
+intro.addEventListener('click',endIntro);
+
+/* header */
+const header=$('header');
+const onScroll=()=>header.classList.toggle('solid',scrollY>40);
+addEventListener('scroll',onScroll,{passive:true}); onScroll();
+const burger=$('.burger');
+burger.addEventListener('click',()=>{const o=document.body.classList.toggle('menu-open');burger.setAttribute('aria-expanded',o);burger.setAttribute('aria-label',o?'Fechar menu':'Abrir menu');document.body.style.overflow=o?'hidden':'';});
+$$('.mnav a').forEach(a=>a.addEventListener('click',()=>{document.body.classList.remove('menu-open');burger.setAttribute('aria-expanded',false);document.body.style.overflow='';}));
+$$('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const t=$(a.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:reduce?'auto':'smooth'});}}));
+
+/* reveal */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.14,rootMargin:'0px 0px -6% 0px'});
+function revealHero(){ $$('.hero .rv,.hero .split').forEach(el=>el.classList.add('in')); }
+$$('.rv,.split').forEach(el=>{ if(!el.closest('.hero')) io.observe(el); });
+
+/* parallax discreto */
+const px=$('[data-parallax]');
+if(px&&!reduce){ let t=false; addEventListener('scroll',()=>{ if(t)return; t=true; requestAnimationFrame(()=>{ const y=Math.min(scrollY,innerHeight); px.style.transform=`translate3d(0,${-y*0.08}px,0)`; t=false; }); },{passive:true}); }
+
+/* carrosséis */
+$$('.carousel').forEach(car=>{
+  const slides=$$('.slide',car), n=slides.length, count=$('.count',car), bar=$('.bar i',car), isVid=car.hasAttribute('data-video');
+  const dur=+car.dataset.auto||5000; let i=0, timer=null, visible=false, start=0, raf=0;
+  const pad=v=>String(v).padStart(2,'0');
+  function render(){
+    slides.forEach((s,k)=>{ let d=k-i; if(d>n/2)d-=n; if(d<-n/2)d+=n; s.dataset.pos=Math.abs(d)<=2?d:'x'; s.setAttribute('aria-hidden',d!==0);
+      const v=$('video',s); if(v){ if(d===0&&visible){ if(v.preload==='none')v.preload='auto'; v.play().catch(()=>{}); } else { v.pause(); } } });
+    count.textContent=pad(i+1)+' / '+pad(n);
+  }
+  function go(k){ i=(k+n)%n; render(); restart(); }
+  function tick(t){ if(!start)start=t; const p=Math.min((t-start)/dur,1); bar.style.transform=`scaleX(${p})`; if(p>=1){ i=(i+1)%n; render(); start=t; } raf=requestAnimationFrame(tick); }
+  function restart(){ cancelAnimationFrame(raf); start=0; bar.style.transform='scaleX(0)'; if(visible&&!reduce&&!car.matches(':hover')) raf=requestAnimationFrame(tick); }
+  $('.prev',car).addEventListener('click',()=>go(i-1));
+  $('.next',car).addEventListener('click',()=>go(i+1));
+  slides.forEach((s,k)=>s.addEventListener('click',()=>{ if(s.dataset.pos!=='0') go(k); }));
+  car.addEventListener('mouseenter',()=>cancelAnimationFrame(raf));
+  car.addEventListener('mouseleave',restart);
+  car.tabIndex=0; car.addEventListener('keydown',e=>{ if(e.key==='ArrowLeft')go(i-1); if(e.key==='ArrowRight')go(i+1); });
+  let x0=null; const stage=$('.stage',car);
+  stage.addEventListener('pointerdown',e=>{x0=e.clientX;});
+  stage.addEventListener('pointerup',e=>{ if(x0===null)return; const dx=e.clientX-x0; x0=null; if(Math.abs(dx)>40) go(dx<0?i+1:i-1); });
+  new IntersectionObserver(es=>es.forEach(e=>{ visible=e.isIntersecting; render(); restart(); }),{threshold:.25}).observe(car);
+  render();
+});
+
+/* vídeo de João Pessoa pausa fora da tela */
+const jpv=$('.jp-video video');
+if(jpv) new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting?jpv.play().catch(()=>{}):jpv.pause()),{threshold:.2}).observe(jpv);
+})();
+</script>
+</body>
+</html>
